@@ -38,7 +38,7 @@ new Vue({
                     this.juegos=data;
                     this.calificacionjuego = this.calificacionAestrellas(this.juegos.calificacion);
                     this.calificacionusr = this.calificacionAestrellas(this.juegos.calificacionusr);
-                    this.juegos.calificacion = parseFloat(this.data.calificacion.toFixed(1));
+                    this.juegos.calificacion = round(this.data.calificacion, 1);
                     vm.$forceUpdate();
             }catch(error){
 
